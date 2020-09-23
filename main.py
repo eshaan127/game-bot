@@ -13,13 +13,18 @@ import os
 # Set prefix
 client = commands.Bot(command_prefix = 'game ')
 
+# Set help as game played
+@client.event
+async def on_ready():
+    print('Bot is ready')
+    await client.change_presence(activity=discord.Game(name='game help'))
 
 # Ping Command
 @client.command()
 async def ping(ctx):
     await ctx.send(f'Pong! {round (client.latency * 1000)}ms ')
 
-#Error command
+# Error message
 @client.event
 async def on_command_error(ctx, error):
     await ctx.send(f'Error, Try "game help" command ({error})')
@@ -35,16 +40,6 @@ async def help(ctx):
     embed.set_author(name='Help : list of commands available')
     embed.add_field(name='game ping', value='Returns bot respond time in milliseconds', inline=False)
     await ctx.send(embed=embed)
-
-
-
-# React to any message that contains 'curry'
-@client.event
-async def on_message(ctx):
-    if 'curry' in ctx.content:
-        emoji = '\N{EYES}'
-        await ctx.add_reaction(emoji)
-
 
 # Run token
 client.run('')
