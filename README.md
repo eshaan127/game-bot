@@ -1,5 +1,5 @@
 # game-bot
-Discord Bot callled "Game Bot" made for servers.
+Discord Bot called "Game Bot" made for servers.
 
 # About
 Made this game bot for multiple games to play in discord servers.
