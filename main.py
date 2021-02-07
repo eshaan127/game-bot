@@ -68,7 +68,7 @@ async def info(ctx):
     embed.add_field(name="**Built with**", value="`Python3.8                `", inline=True)
     embed.add_field(name="**Contributors**", value="`NIHԀ˥Op#2625, christopher.lower()#4085`")
     embed.add_field(name="**This bot was made on**", value="`September 23rd, 2020     `", inline=False)
-    embed.add_field(name="**Check out our github repo:**", value="`https://github.com/eshaan127/game-bot     `", inline=False)
+    embed.add_field(name="**Check out our github repo:**", value="`https://github.com/frostt127/game-bot     `", inline=False)
     await ctx.send(embed=embed)
 
 # Rules Command
